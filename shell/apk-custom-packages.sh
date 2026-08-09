@@ -1,162 +1,185 @@
 #!/bin/bash
+# =====================================================
+# IMMortalWrt 25.12.x 推荐增强版
+#
+# iStore + OpenClash Meta + PassWall2
+# KMS + 文件服务 + DDNS + VPN
+#
+# 家庭软路由优化配置
+# =====================================================
 
-# =================================================
-# IMM 25.12.x 精选家庭软路由插件合集
-# =================================================
 
+# ================= iStore 软件中心 =================
+# 软件管理中心
 
-# =========================
-# LuCI 美化主题
-# =========================
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-app-store \
+luci-i18n-store-zh-cn"
 
-# Argon主题
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-argon luci-app-argon-config luci-i18n-argon-config-zh-cn"
 
 
-# Aurora极光主题
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-aurora luci-app-aurora-config luci-i18n-aurora-config-zh-cn"
+# ================= 首页/网络向导 =================
+# 依赖 iStore
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-quickstart-zh-cn"
 
 
-# =========================
-# 代理插件
-# =========================
 
+# ================= 文件管理 =================
 
-# OpenClash Meta
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-openclash luci-compat kmod-tun kmod-inet-diag kmod-nft-tproxy bash curl ip-full unzip"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+bash \
+quickfile \
+luci-app-quickfile \
+luci-i18n-quickfile-zh-cn"
 
 
-# PassWall2备用
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES geoview xray-core sing-box hysteria kmod-nft-socket kmod-nft-tproxy luci-app-passwall2 luci-i18n-passwall2-zh-cn"
 
+# ================= 主题 =================
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-theme-aurora \
+luci-app-aurora-config \
+luci-i18n-aurora-config-zh-cn"
 
-# =========================
-# 去广告
-# =========================
 
 
-# Adblock-fast
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-adblock-fast-zh-cn"
+# ================= 分区扩容 =================
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-app-partexp \
+luci-i18n-partexp-zh-cn"
 
 
-# =========================
-# 文件管理
-# =========================
 
+# ================= 流量监控 =================
 
-# QuickFile by sbwml
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES bash quickfile luci-app-quickfile luci-i18n-quickfile-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+bandix \
+luci-app-bandix \
+luci-i18n-bandix-zh-cn"
 
 
 
-# =========================
-# 系统管理
-# =========================
+# =====================================================
+# 代理核心
+# =====================================================
 
 
-# 自动重启
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-autoreboot-zh-cn"
+# ================= PassWall2 =================
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+geoview \
+xray-core \
+sing-box \
+hysteria \
+kmod-nft-socket \
+kmod-nft-tproxy \
+luci-app-passwall2 \
+luci-i18n-passwall2-zh-cn"
 
-# 高级重启
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-advanced-reboot-zh-cn"
 
 
+# ================= OpenClash Meta =================
 
-# =========================
-# KMS激活
-# =========================
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-app-openclash \
+luci-compat \
+kmod-tun \
+kmod-inet-diag \
+kmod-nft-tproxy \
+bash \
+curl \
+ip-full \
+unzip"
 
 
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-vlmcsd-zh-cn"
 
+# ================= VPN =================
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-proto-wireguard"
 
-# =========================
-# DDNS
-# =========================
 
 
-# DDNS-GO
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-ddns-go-zh-cn"
+# ================= 内网穿透 =================
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-zerotier-zh-cn \
+luci-i18n-frpc-zh-cn \
+luci-i18n-ddns-go-zh-cn"
 
 
-# =========================
-# 流量统计
-# =========================
 
+# ================= 文件服务 =================
 
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES bandix luci-app-bandix luci-i18n-bandix-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-samba4-zh-cn \
+luci-i18n-filebrowser-go-zh-cn"
 
 
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-vnstat2-zh-cn"
 
+# ================= 下载工具 =================
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-aria2-zh-cn"
 
-# =========================
-# 计划任务
-# =========================
 
 
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-taskplan luci-i18n-taskplan-zh-cn"
+# ================= KMS服务 =================
+# Windows / Office KMS激活服务
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+vlmcsd \
+luci-app-vlmcsd \
+luci-i18n-vlmcsd-zh-cn"
 
 
-# =========================
-# 内网穿透
-# =========================
 
+# ================= 网络优化 =================
 
-# ZeroTier
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-zerotier-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-adblock-fast-zh-cn \
+luci-i18n-smartdns-zh-cn \
+luci-i18n-statistics-zh-cn"
 
 
-# FRP客户端
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-frpc-zh-cn"
 
+# ================= Web终端 =================
+# 方便维护
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-ttyd-zh-cn"
 
-# =========================
-# VPN
-# =========================
 
 
-# WireGuard
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-proto-wireguard"
+# ================= 网络唤醒 =================
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-wol-zh-cn"
 
 
-# Tailscale
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-tailscale-community luci-i18n-tailscale-community-zh-cn"
 
+# ================= 自动重启 =================
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-autoreboot-zh-cn"
 
-# =========================
-# 网络唤醒
-# =========================
 
 
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-wol-zh-cn"
+# ================= UPnP =================
 
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-upnp-zh-cn"
 
 
-# =========================
-# 网络工具
-# =========================
 
+# ================= 磁盘管理 =================
 
-# 网络诊断工具
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-netdata-zh-cn"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
+luci-i18n-diskman-zh-cn"
 
 
-# HTTPS DNS代理备用
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-https-dns-proxy-zh-cn"
 
-
-
-echo "Custom packages loaded:"
-echo "$CUSTOM_PACKAGES"
+echo "CUSTOM_PACKAGES=$CUSTOM_PACKAGES"
