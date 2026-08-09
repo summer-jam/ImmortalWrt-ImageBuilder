@@ -3,22 +3,33 @@
 # =================================================
 # IMM 25.12.x
 # OpenWrt 24.10
-# 家庭软路由精选插件
+# 家庭软路由完整版
+# iStore + OpenClash方案
 # =================================================
 
 
 # =========================
-# LuCI主题
+# iStore 软件中心
 # =========================
+
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-store"
+
+
+
+# =========================
+# LuCI主题美化
+# =========================
+
+
 # 首页和网络向导
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-quickstart-zh-cn"
 
 
-# Argon主题（主推荐）
+# Argon主题
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-argon luci-app-argon-config luci-i18n-argon-config-zh-cn"
 
 
-# Aurora主题（备用）
+# Aurora极光主题
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-aurora luci-app-aurora-config luci-i18n-aurora-config-zh-cn"
 
 
@@ -52,16 +63,6 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-adblock-fast-zh-cn"
 
 # MosDNS
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-mosdns luci-i18n-mosdns-zh-cn"
-
-
-
-# =========================
-# 文件管理
-# =========================
-
-
-# FileBrowser
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-filebrowser-zh-cn"
 
 
 
@@ -123,11 +124,9 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-taskplan luci-i18n-taskplan-zh-cn"
 # =========================
 
 
-# ZeroTier
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-zerotier-zh-cn"
 
 
-# FRP客户端
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-frpc-zh-cn"
 
 
@@ -137,11 +136,9 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-frpc-zh-cn"
 # =========================
 
 
-# WireGuard
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-proto-wireguard"
 
 
-# Tailscale
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-tailscale-community luci-i18n-tailscale-community-zh-cn"
 
 
@@ -164,4 +161,5 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
 
 
 
-echo $CUSTOM_PACKAGES
+echo "CUSTOM_PACKAGES:"
+echo "$CUSTOM_PACKAGES"
