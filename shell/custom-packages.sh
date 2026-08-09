@@ -10,6 +10,8 @@
 # =========================
 # LuCI主题
 # =========================
+# 首页和网络向导
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-quickstart-zh-cn"
 
 
 # Argon主题（主推荐）
