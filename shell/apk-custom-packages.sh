@@ -13,8 +13,7 @@
 # 软件管理中心
 
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES \
-luci-app-store \
-luci-i18n-store-zh-cn"
+luci-app-store 
 
 
 
