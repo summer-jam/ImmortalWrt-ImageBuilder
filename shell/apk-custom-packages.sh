@@ -62,7 +62,7 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES ddns-go luci-i18n-ddns-go-zh-cn"
 # ---------- 网络服务 ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES samba4 luci-i18n-samba4-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES miniupnpd luci-i18n-upnp-zh-cn"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES timewol luci-i18n-timewol-zh-cn"
+# CUSTOM_PACKAGES="$CUSTOM_PACKAGES timewol luci-i18n-timewol-zh-cn"
 
 # ---------- DNS / 广告过滤 (mosdns + adguardhome, 与 OpenClash 共存时注意 DNS 接管) ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-mosdns luci-i18n-mosdns-zh-cn"
@@ -80,14 +80,14 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-quickstart luci-i18n-quickstart-zh-cn
 
 # ---------- 网络配置向导 / 仪表盘 (实用) ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-netwizard luci-i18n-netwizard-zh-cn"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-dashboard luci-i18n-dashboard-zh-cn"
+# CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-dashboard luci-i18n-dashboard-zh-cn"
 
 # ---------- 任务计划 / 命令执行 (实用) ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-taskplan luci-i18n-taskplan-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-commands luci-i18n-commands-zh-cn"
 
 # ---------- 网络测速 (实用) ----------
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-netspeedtest luci-i18n-netspeedtest-zh-cn"
+# CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-netspeedtest luci-i18n-netspeedtest-zh-cn"
 
 # ---------- 组网 (EasyTier, 实用) ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES easytier luci-app-easytier"
