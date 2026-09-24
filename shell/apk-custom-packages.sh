@@ -14,6 +14,7 @@
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-aurora luci-app-aurora-config luci-i18n-aurora-config-zh-cn"
 
 # ---------- 文件管理 (build25.sh 已默认装 filemanager 中文, 这里再叠 filebrowser-go 作补充) ----------
+# 25.12 仓库可能无 ipk: filebrowser-go, 若 build 报错请保持注释
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES filebrowser-go luci-i18n-filebrowser-go-zh-cn"
 
 # ---------- KMS 激活服务 ----------
@@ -22,8 +23,10 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES vlmcsd luci-i18n-vlmcsd-zh-cn"
 # ---------- 分区扩容 / 流量监控 / 看门狗 / 高级卸载 ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-partexp luci-i18n-partexp-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES bandix luci-app-bandix luci-i18n-bandix-zh-cn"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-watchdog luci-i18n-watchdog-zh-cn"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-uninstall"
+# 25.12 apk 仓库无此包: luci-app-watchdog, 保持注释
+# CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-watchdog luci-i18n-watchdog-zh-cn"
+# 25.12 apk 仓库无此包: luci-app-uninstall, 保持注释
+# CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-uninstall"
 
 # ---------- 定时重启 (autoreboot + advanced-reboot) ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-autoreboot luci-i18n-autoreboot-zh-cn"
@@ -60,8 +63,10 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES frpc luci-i18n-frpc-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES ddns-go luci-i18n-ddns-go-zh-cn"
 
 # ---------- 网络服务 ----------
+# 25.12 仓库可能无 ipk: samba4, 若 build 报错请保持注释
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES samba4 luci-i18n-samba4-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES miniupnpd luci-i18n-upnp-zh-cn"
+# 25.12 仓库可能无 ipk: timewol, 若 build 报错请保持注释
 # CUSTOM_PACKAGES="$CUSTOM_PACKAGES timewol luci-i18n-timewol-zh-cn"
 
 # ---------- DNS / 广告过滤 (mosdns + adguardhome, 与 OpenClash 共存时注意 DNS 接管) ----------
@@ -70,7 +75,8 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-adguardhome"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES adblock-fast luci-i18n-adblock-fast-zh-cn"
 
 # ---------- 加速 / 流量统计 (实用热门) ----------
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
+# 25.12 apk 仓库无此包: luci-app-turboacc, 保持注释
+# CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
 
 # ---------- 公网神器 / 端口转发 / 反向代理 ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-lucky lucky luci-i18n-lucky-zh-cn"
@@ -79,7 +85,9 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-lucky lucky luci-i18n-lucky-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-quickstart luci-i18n-quickstart-zh-cn"
 
 # ---------- 网络配置向导 / 仪表盘 (实用) ----------
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-netwizard luci-i18n-netwizard-zh-cn"
+# 25.12 apk 仓库无此包: luci-app-netwizard, 保持注释
+# CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-netwizard luci-i18n-netwizard-zh-cn"
+# 25.12 仓库可能无 ipk: luci-app-dashboard, 若 build 报错请保持注释
 # CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-dashboard luci-i18n-dashboard-zh-cn"
 
 # ---------- 任务计划 / 命令执行 (实用) ----------
@@ -87,10 +95,12 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-taskplan luci-i18n-taskplan-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-commands luci-i18n-commands-zh-cn"
 
 # ---------- 网络测速 (实用) ----------
+# 25.12 仓库可能无 ipk: luci-app-netspeedtest, 若 build 报错请保持注释
 # CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-netspeedtest luci-i18n-netspeedtest-zh-cn"
 
 # ---------- 组网 (EasyTier, 实用) ----------
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES easytier luci-app-easytier"
+# 25.12 apk 仓库无此包: easytier, 保持注释
+# CUSTOM_PACKAGES="$CUSTOM_PACKAGES easytier luci-app-easytier"
 
 # ---------- 应用过滤 (openappfilter, 实用) ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-appfilter luci-i18n-appfilter-zh-cn"
