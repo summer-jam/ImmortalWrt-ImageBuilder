@@ -14,7 +14,7 @@
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-aurora luci-app-aurora-config luci-i18n-aurora-config-zh-cn"
 
 # ---------- 文件管理 (build25.sh 已默认装 filemanager 中文, 这里再叠 filebrowser-go 作补充) ----------
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES filebrowser-go luci-i18n-filebrowser-go-zh-cn"
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES filebrowser-go luci-i18n-filebrowser-go-zh-cn"
 
 # ---------- KMS 激活服务 ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES vlmcsd luci-i18n-vlmcsd-zh-cn"
@@ -60,7 +60,7 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES frpc luci-i18n-frpc-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES ddns-go luci-i18n-ddns-go-zh-cn"
 
 # ---------- 网络服务 ----------
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES samba4 luci-i18n-samba4-zh-cn"
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES samba4 luci-i18n-samba4-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES miniupnpd luci-i18n-upnp-zh-cn"
 # CUSTOM_PACKAGES="$CUSTOM_PACKAGES timewol luci-i18n-timewol-zh-cn"
 
