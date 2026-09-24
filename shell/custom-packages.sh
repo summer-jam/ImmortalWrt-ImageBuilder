@@ -14,8 +14,8 @@
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-aurora luci-app-aurora-config luci-i18n-aurora-config-zh-cn"
 
 # ---------- 文件管理 (build24.sh 已默认装 filemanager 中文, 这里再叠 filebrowser-go 作补充) ----------
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES filebrowser-go luci-i18n-filebrowser-go-zh-cn"
-
+# filebrowser-go: 24.10 x86_64 仓库无 ipk, 需手动 opkg install filebrowser-go
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES filebrowser-go luci-i18n-filebrowser-go-zh-cn"
 # ---------- KMS 激活服务 ----------
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES vlmcsd luci-i18n-vlmcsd-zh-cn"
 
@@ -60,8 +60,8 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES frpc luci-i18n-frpc-zh-cn"
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES ddns-go luci-i18n-ddns-go-zh-cn"
 
 # ---------- 网络服务 ----------
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES samba4 luci-i18n-samba4-zh-cn"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES miniupnpd luci-i18n-upnp-zh-cn"
+# samba4: 24.10 x86_64 仓库无 ipk (24.10 里叫 samba4-server), 需手动 opkg install
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES samba4 luci-i18n-samba4-zh-cn"
 # timewol: 24.10 x86_64 仓库无 ipk, 需手动 opkg install timewol
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES timewol luci-i18n-timewol-zh-cn"
 # ---------- DNS / 广告过滤 (mosdns + adguardhome, 与 OpenClash 共存时注意 DNS 接管) ----------
